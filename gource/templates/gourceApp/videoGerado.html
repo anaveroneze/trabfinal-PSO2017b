@@ -1,0 +1,39 @@
+{% extends "gourceApp/base.html" %}
+{% block content %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 align="center">Gource Generator</h1>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 align="center">Sua animação foi gerada <i class="glyphicon glyphicon-facetime-video"></i>
+                      <br><br>
+                      <video width='600' controls autoplay>
+                      <source src="{{ MEDIA_URL }}gource.mp4" type="video/mp4"></source>
+                      Your browser does not support the video tag.
+                      </video>
+                      <br><br>
+                    </h3>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <!--  INSERIR UM FORMULÁRIO AQUI -->
+
+                </div>
+            </div>
+            <div class="row">
+                <hr>
+                <div class="col-md-12" align="center">
+                    <a href="{% url 'cadastro_dados' %}"><input class="btn btn-default btn-md" type="button" value="Inserir mais dados"/></a>
+                    <a href="{% url 'cadastro_gource' %}"><input class="btn btn-default btn-md" type="button" value="Editar vídeo"/></a>
+                    <a href="{% url 'index_page' %}"><input class="btn btn-default btn-md" type="button" value="Voltar para a Página Inicial"/></a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
